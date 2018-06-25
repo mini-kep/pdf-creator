@@ -16,8 +16,8 @@ Experimental PDF output with Cyrillic letters
 
 Make Russian fonts work in reportlab/xhtml2pdf
 
-    - https://stackoverflow.com/questions/34158693/xhtml2pdf-cyrillic-characters-dont-work
-    - http://code.activestate.com/recipes/438817-how-to-use-cyrillic-fonts-in-reportlab-pdf-library/    
+  - https://stackoverflow.com/questions/34158693/xhtml2pdf-cyrillic-characters-dont-work
+  - http://code.activestate.com/recipes/438817-how-to-use-cyrillic-fonts-in-reportlab-pdf-library/    
     
 
 

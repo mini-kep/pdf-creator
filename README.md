@@ -2,12 +2,12 @@
 Experimental PDF output with Cyrillic letters
 
 #### Possible pipelines:
-    - `html -> pdf` (no precise formatting, but easy to setup; has errors with cyrillic letters)  
-    - `reportlab -> pdf` (errors with cyrillic letters) 
-    - `docx template -> pdf` (with <https://github.com/elapouya/python-docx-template>)
-    - `latex - > pdf` (latex installation too heavy and template too complex, but very precise)
-    - scientific writing with [pweave](mpastell.com/pweave/) (linear text only)
-    - plotly html report generation 
+ - `html -> pdf` (no precise formatting, but easy to setup; has errors with cyrillic letters)  
+ - `reportlab -> pdf` (errors with cyrillic letters) 
+ - `docx template -> pdf` (with <https://github.com/elapouya/python-docx-template>)
+ - `latex - > pdf` (latex installation too heavy and template too complex, but very precise)
+ - scientific writing with [pweave](mpastell.com/pweave/) (linear text only)
+ - plotly html report generation 
     
 #### References:
     - [Three ways to make a PDF from HTML in Python](https://gist.github.com/philfreo/44e2e26a65820497db234d0c66ed58ae)

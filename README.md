@@ -10,7 +10,7 @@ Experimental PDF output with Cyrillic letters
  - plotly html report generation 
     
 #### References:
-    - [Three ways to make a PDF from HTML in Python](https://gist.github.com/philfreo/44e2e26a65820497db234d0c66ed58ae)
+ - [Three ways to make a PDF from HTML in Python](https://gist.github.com/philfreo/44e2e26a65820497db234d0c66ed58ae)
 
 #### Current task (2018-06-25):
 

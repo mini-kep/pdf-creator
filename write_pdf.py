@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from jinja2 import Template
 from xhtml2pdf import pisa
 
@@ -109,6 +110,8 @@ if __name__ == "__main__":
     html_out = template.render(template_vars)
     print('Created html:\n', html_out)
     Path(locate('listing.html')).write_text(html_out, encoding='utf-8')
+    sig = Path(locate('listing.html')).read_bytes()
+    assert sig.startswith(b'<html>')
     
     # ERROR: xhtml2pdf cannot render Russian letters without patching
     convertHtmlToPdf(html_out, locate('out.pdf'))

@@ -1,0 +1,4 @@
+pandas
+matplotlib
+jinja2
+xhtml2pdf

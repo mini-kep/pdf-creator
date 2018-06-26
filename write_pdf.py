@@ -26,6 +26,10 @@ table_doc = """
 #<div style="page-break-before: always" id="plot">
 #{% else %}
 
+
+# пробовали: 
+#    @font-face { font-family: Arial; src: url('fonts/arial.ttf') }
+
 template_doc = """<html>
 <head>
     <meta http-equiv="content-type" 
@@ -33,7 +37,7 @@ template_doc = """<html>
     <title>{{ page_header }}</title>
 <style type="text/css">
     @page { size: A4; margin: 1cm; }
-    @font-face { font-family: Arial; src: url('fonts/arial.ttf') }
+    @font-face { font-family: Arial; src: url('%s') }
     * {font-family: Arial}
 </style>
 <style>
@@ -43,7 +47,8 @@ template_doc = """<html>
     margin-right: auto;
     height: 260px; 
 }
-  </style>
+  </style>""" % 'arial.ttf' + \
+"""  
 </head>
 <body>
      %s
@@ -68,6 +73,9 @@ def convertHtmlToPdf(sourceHtml: str, outputFilename: str):
                 show_error_as_pdf=True)
     # return True on success and False on errors
     return pisaStatus.err
+
+
+FONT = str(Path(__file__).parent / 'fonts'/ 'arial.ttf')
 
 FOLDER = Path(__file__).parent / 'output'
 if not FOLDER.exists():

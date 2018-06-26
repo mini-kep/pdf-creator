@@ -33,7 +33,8 @@ template_doc = """<html>
     <title>{{ page_header }}</title>
 <style type="text/css">
     @page { size: A4; margin: 1cm; }
-    @font-face { font-family: Arial; }
+    @font-face { font-family: Arial; src: url('fonts/arial.ttf') }
+    * {font-family: Arial}
 </style>
 <style>
 .rowimage {

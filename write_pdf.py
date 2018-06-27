@@ -7,6 +7,10 @@ import access
 import create_png
 import page_definition
 
+import logging
+logging.basicConfig(level=logging.DEBUG,
+format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
 table_doc = """
 {% for plot in plot_dicts %}
 
@@ -37,7 +41,7 @@ template_doc = """<html>
     <title>{{ page_header }}</title>
 <style type="text/css">
     @page { size: A4; margin: 1cm; }
-    @font-face { font-family: Arial; src: url('%s') }
+    @font-face { font-family: Arial; src: url('D:/arial.ttf') }
     * {font-family: Arial}
 </style>
 <style>
@@ -47,7 +51,7 @@ template_doc = """<html>
     margin-right: auto;
     height: 260px; 
 }
-  </style>""" % 'arial.ttf' + \
+  </style>""" + \
 """  
 </head>
 <body>

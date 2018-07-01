@@ -110,21 +110,21 @@ if __name__ == "__main__":
                           start=2005)
                 figname = locate(chart.filename)
                 create_png.save(figname)
-    
-    # render template
-    template = Template(template_doc)
-    # create template parameters
-    plot_dicts = [{'header': header,
-                   'filenames': [as_uri(c.filename) for c in charts]}                      
-                  for header, charts in  page_definition.CHARTS_DICT.items()]
-    template_vars = dict(page_header="Macroeconomic charts",
-                         plot_dicts=plot_dicts
-                         )
-    html_out = template.render(template_vars)
-    print('Created html:\n', html_out)
-    Path(locate('listing.html')).write_text(html_out, encoding='utf-8')
-    sig = Path(locate('listing.html')).read_bytes()
-    assert sig.startswith(b'<html>')
-    
-    # ERROR: xhtml2pdf cannot render Russian letters without patching
-    convertHtmlToPdf(html_out, locate('out.pdf'))
+    if 0:    
+        # render template
+        template = Template(template_doc)
+        # create template parameters
+        plot_dicts = [{'header': header,
+                       'filenames': [as_uri(c.filename) for c in charts]}                      
+                      for header, charts in  page_definition.CHARTS_DICT.items()]
+        template_vars = dict(page_header="Macroeconomic charts",
+                             plot_dicts=plot_dicts
+                             )
+        html_out = template.render(template_vars)
+        print('Created html:\n', html_out)
+        Path(locate('listing.html')).write_text(html_out, encoding='utf-8')
+        sig = Path(locate('listing.html')).read_bytes()
+        assert sig.startswith(b'<html>')
+        
+        # ERROR: xhtml2pdf cannot render Russian letters without patching
+        convertHtmlToPdf(html_out, locate('out.pdf'))

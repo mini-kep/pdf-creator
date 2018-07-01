@@ -1,10 +1,10 @@
 import pandas as pd
 
 import matplotlib
+#matplotlib.use('agg') 
 import matplotlib.pyplot as plt
 import matplotlib.dates as dates
 
-matplotlib.use('agg') # FIXME: is this necessary?
 matplotlib.style.use('ggplot')
 
 # WARNING:

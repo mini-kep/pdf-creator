@@ -1,6 +1,7 @@
 import pandas as pd
 
 import matplotlib
+# below has conflict with Ipython packend in spyder 
 #matplotlib.use('agg') 
 import matplotlib.pyplot as plt
 import matplotlib.dates as dates
